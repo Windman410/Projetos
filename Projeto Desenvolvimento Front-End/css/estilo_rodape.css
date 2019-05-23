@@ -1,0 +1,66 @@
+.rodape{
+	height: 20px;
+	position: relative;
+	width: 100%;
+	border-top: 1px solid #222;
+	background-color: #CCFFFF;
+}
+
+.rodape .licenca{
+	height: 10px;
+	width: 100px;
+	margin: 3px auto;
+}
+
+.rodape .botoes{ display: none;}
+
+@media(min-width:701px){
+
+	.rodape{
+		height: 40px;
+	}
+	
+	.rodape .botoes{
+		display: block;
+		position: absolute;
+		bottom: 5px;
+		width: 30px;
+		height: 30px;		
+		border: 1px solid #222;
+		border-radius: 50%;
+	}
+
+	.rodape .botoes p{
+		font-size: 20px;
+	}
+
+	.rodape #botao_topo{
+		right: 20px;
+		background-image: url(../img/topo.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+
+	}
+
+	.rodape #botao_facebook{
+		right: 160px;
+		background-image: url(../img/facebook.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		}
+
+	.rodape #botao_twitter{
+		right: 200px;
+		background-image: url(../img/twitter.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.rodape #botao_youtube{
+		right: 240px;
+		background-image: url(../img/youtube.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+}

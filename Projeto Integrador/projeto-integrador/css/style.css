@@ -1,0 +1,63 @@
+header, .main, footer{
+  	padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+	header, .main, footer{
+		padding-left: 0;
+	}
+}
+
+#logo{
+	width: 100%;
+}
+
+.tabs .tab a{
+    color:#CC3B3B;
+}
+.tabs .tab a:hover,.tabs .tab a.active {
+	background-color:transparent;
+	color:#FF0000;
+}
+.tabs .tab.disabled a,.tabs .tab.disabled a:hover {
+	color:#B35D5D;
+	opacity: 0.7;
+}
+.tabs .indicator {
+	background-color:#FF0000;
+}
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+	color: #999999;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+	border-bottom: 1px solid #999999;
+	box-shadow: 0 1px 0 0 #999999;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+	border-bottom: 1px solid #ADAD4E;
+	box-shadow: 0 1px 0 0 #ADAD4E;
+}
+
+#textarea1:focus {
+  border-bottom: 1px solid #999999;
+  box-shadow: 0 1px 0 0 #999999;
+}
+
+#textarea1:focus + label {
+  color: #999999;
+}
+
+textarea.materialize-textarea{
+	height: 6rem;
+}
+.tabs {
+	overflow-x: hidden;
+}
+
+.acoes{
+	cursor: pointer;
+}

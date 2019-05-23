@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> MVM Turismo </title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/estilo_topo.css">
+	<link rel="stylesheet" type="text/css" href="../css/estilo_rodape.css">
+	<link rel="stylesheet" type="text/css" href="../css/estilo_menuMobile.css">
+	<link rel="stylesheet" type="text/css" href="../css/estilo_produtos.css">
+	<link rel="icon" type="img/icon" href="../img/favicon.ico">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="../js/jquery.js"></script>
+
+</head>
+
+<body>
+	<!-- COMEÇO MENU MOBILE -->
+	<section class="menuMobile"> 
+
+		<div id="fechar"> </div>
+		
+		<div class="linkMenuMobile">
+			<form action="procura.php" method="get">
+				<input type="text" placeholder="pesquisar..." name="pesquisa">
+				<input type="image" src="../img/img02.jpg" alt="Enviar">	
+			</form>
+		</div>
+
+		<a href="../index.html"> 
+			<div class="linkMenuMobile">
+				<p> Home </p>
+			</div>
+		</a>
+
+		<a href="produtos.html"> 
+			<div class="linkMenuMobile">
+				<p> Serviços </p>
+			</div>
+		</a>
+
+		<a href="clientes.html"> 
+			<div class="linkMenuMobile">
+				<p> Clientes </p>
+			</div>
+		</a>
+		
+		<a href="contato.html">
+			<div class="linkMenuMobile">
+				<p> Contato </p>
+			</div>
+		</a>
+	</section> 
+	<!-- FIM MENU MOBILE -->
+
+
+	<div class="pelicula"> </div>
+	
+	<!-- COMEÇO TOPO -->
+	<header class="topo">
+		<!-- COMEÇO CONTAINER -->
+		<div class="container">
+			<!-- COMEÇO LOGO -->
+			<figure>
+				<a href="../index.html">
+					<img src="../img/logo.png" alt="logo">
+				</a>
+			</figure> 
+			<!-- FIM LOGO -->
+			
+			<!-- COMEÇO MENU -->
+			<nav class="menu">
+				<a href="../index.html">
+					<div class="artigo">
+						<p> Home </p>
+					</div>
+				</a>
+				
+				<a href="produtos.html">
+					<div class="artigo" id="artigosProduto">
+						 <p> Serviços </p> 						
+					</div>
+				</a>
+				
+
+				<a href="clientes.html">
+					<div class="artigo">
+						<p> Clientes </p>
+					</div>
+				</a>
+
+				<a href="contato.html">
+					<div class="artigo">
+						<p> Contato </p>
+					</div>
+				</a>
+			</nav> 
+			<!-- FIM MENU -->
+
+			<!-- COMEÇO PESQUISA -->
+			<form method="get" action="procura.php" class="busca">
+				<input type="text" placeholder="pesquisar..." name="pesquisa">
+				<input type="image" src="../img/img02.jpg" alt="Enviar">
+			</form>
+			<!-- FIM PESQUISA -->
+
+			<h1 class="tituloMobile"> Marrocos </h1>	
+
+			<div class="botaoMenuMobile"> </div>
+		</div> 
+		<!-- FIM CONTAINER -->
+	</header> 
+	<!-- FIM TOPO -->
+
+	<!-- COMEÇO SUBARTIGOS -->
+	<div class="subArtigo">
+		<nav>
+			<ul>
+				<li> <a href="produto1.html"> <p> Viagem para Marrocos </p> </a> </li>
+				<li> <a href="produto2.html"> <p> Viagem para Disney </p> </a> </li>
+				<li> <a href="produto3.html"> <p> Viagem para Punta Cana </p> </a> </li>
+			</ul>
+		</nav>
+		<a href="pag/produto1.html"> <div class="subArtigoImagem" id="subArtigoImagem01"> </div> </a>
+		<a href="pag/produto2.html"> <div class="subArtigoImagem" id="subArtigoImagem02"> </div> </a>
+		<a href="pag/produto3.html"> <div class="subArtigoImagem" id="subArtigoImagem03"> </div> </a>
+	</div>
+	<!-- FIM SUBARTIGOS -->
+
+	<!-- COMEÇO CONTEUDO -->
+	<div class="conteudo">
+		<h1> Marrocos </h1>
+
+		<img src="../img/marrocos2.jpg" alt="imagem">
+		<p>	
+
+		Seja pela telenovela O Clone ou pelo Filme Casablanca, o Marrocos ficou equivocadamente conhecido. Há muito mais contrastes e exotismo do que na ficção neste país de maioria muçulmana que é um reino desde 1957, um ano depois de libertar-se do domínio francês – o turista pode se comunicar no idioma de Catherine Deneuve ou em árabe, a língua oficial.
+
+		<br> <br>
+
+		Banhado por 2 800 quilômetros do Oceano Atlântico e por 530 quilômetros do Mar Mediterrâneo, o Marrocos ainda possui uma grande região montanhosa, com um sétimo do país a mais de 2 000 metros acima do nível do mar. Localizado no Magrebe, no noroeste do continente africano, faz fronteira com a Argélia e a Mauritânia. Ao norte, uma viagem de ferry boat cruzando o Estreito de Gibraltar deixa o visitante, cerca de 60 minutos depois, no sul da Espanha. 
+
+		<br> <br>
+
+		O sol inclemente e a poeira do deserto do Saara contrastam com o farto colorido de suas medinas, como são conhecidos os antigos centros cercados de muralhas e forrados de comerciantes de todos os tipos. Rabat, a CAPITAL do país, não tem um turismo tão aquecido quanto Marrakesh, a cidade mais famosa e badalada do Marrocos com seus HOTÉIS, spas e resorts de luxo. Tânger, Fez, Casablanca e Essaouira são outros destinos igualmente procurados pelos turistas, seja por suas praias encantadoras ou por seu comércio atraente e barato.
+
+		</p>
+	</div>
+	<!-- FIM CONTEUDO -->
+
+	<!-- COMEÇO RODAPÉ -->
+	<footer class="rodape">
+		<div class="licenca">
+			<p> &copy; Copyright </p>
+		</div>
+
+		<a href="#">
+			<div class="botoes" id="botao_topo"> <p> 
+			</p> </div>
+		</a>
+
+		<a href="#">
+			<div class="botoes" id="botao_facebook"> </div>
+		</a>
+		
+		<a href="#">
+			<div class="botoes" id="botao_twitter"> </div>
+		</a>
+		
+		<a href="#">
+			<div class="botoes" id="botao_youtube"> </div>
+		</a>
+	</footer>
+	<!-- FIM RODAPÉ -->
+
+</body>
+</html>

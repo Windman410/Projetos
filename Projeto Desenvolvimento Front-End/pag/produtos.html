@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> MVM Turismo </title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/estilo_topo.css">
+	<link rel="stylesheet" type="text/css" href="../css/estilo_rodape.css">
+	<link rel="stylesheet" type="text/css" href="../css/estilo_menuMobile.css">
+	<link rel="stylesheet" type="text/css" href="../css/estilo_listaProdutos.css">
+	<link rel="icon" type="img/icon" href="../img/favicon.ico">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="../js/jquery.js"></script>
+
+</head>
+
+<body>
+	<!-- COMEÇO MENU MOBILE -->
+	<section class="menuMobile"> 
+
+		<div id="fechar"> </div>
+		
+		<div class="linkMenuMobile">
+			<form action="procura.php" method="get">
+				<input type="text" placeholder="pesquisar..." name="pesquisa">
+				<input type="image" src="../img/img02.jpg" alt="Enviar">	
+			</form>
+		</div>
+
+		<a href="../index.html"> 
+			<div class="linkMenuMobile">
+				<p> Home </p>
+			</div>
+		</a>
+
+		<a href="produtos.html"> 
+			<div class="linkMenuMobile">
+				<p> Serviços </p>
+			</div>
+		</a>
+
+		<a href="clientes.html"> 
+			<div class="linkMenuMobile">
+				<p> Clientes </p>
+			</div>
+		</a>
+		
+		<a href="contato.html">
+			<div class="linkMenuMobile">
+				<p> Contato </p>
+			</div>
+		</a>
+	</section> 
+	<!-- FIM MENU MOBILE -->
+
+
+	<div class="pelicula"> </div>
+	
+	<!-- COMEÇO TOPO -->
+	<header class="topo">
+		<!-- COMEÇO CONTAINER -->
+		<div class="container">
+			<!-- COMEÇO LOGO -->
+			<figure>
+				<a href="../index.html">
+					<img src="../img/logo.png" alt="logo">
+				</a>
+			</figure> 
+			<!-- FIM LOGO -->
+			
+			<!-- COMEÇO MENU -->
+			<nav class="menu">
+				<a href="../index.html">
+					<div class="artigo">
+						<p> Home </p>
+					</div>
+				</a>
+				
+				<a href="produtos.html">
+						<div class="artigo" id="artigosProduto">
+							 <p> Serviços </p> 						
+						</div>
+					</a>
+				
+
+				<a href="clientes.html">
+					<div class="artigo">
+						<p> Clientes </p>
+					</div>
+				</a>
+
+				<a href="contato.html">
+					<div class="artigo">
+						<p> Contato </p>
+					</div>
+				</a>
+			</nav> 
+			<!-- FIM MENU -->
+
+			<!-- COMEÇO PESQUISA -->
+			<form method="get" action="procura.php" class="busca">
+				<input type="text" placeholder="pesquisar..." name="pesquisa">
+				<input type="image" src="../img/img02.jpg" alt="Enviar">
+			</form>
+			<!-- FIM PESQUISA -->
+
+			<h1 class="tituloMobile"> Produtos </h1>	
+
+			<div class="botaoMenuMobile"> </div>
+		</div> 
+		<!-- FIM CONTAINER -->
+	</header> 
+	<!-- FIM TOPO -->
+
+	<!-- COMEÇO SUBARTIGOS -->
+		<div class="subArtigo">
+			<nav>
+				<ul>
+					<li> <a href="produto1.html"> <p> Viagem para Marrocos </p> </a> </li>
+					<li> <a href="produto2.html"> <p> Viagem para Disney </p> </a> </li>
+					<li> <a href="produto3.html"> <p> Viagem para Punta Cana </p> </a> </li>
+				</ul>
+			</nav>
+			<a href="pag/produto1.html"> <div class="subArtigoImagem" id="subArtigoImagem01"> </div> </a>
+			<a href="pag/produto2.html"> <div class="subArtigoImagem" id="subArtigoImagem02"> </div> </a>
+			<a href="pag/produto3.html"> <div class="subArtigoImagem" id="subArtigoImagem03"> </div> </a>
+		</div>
+		<!-- FIM SUBARTIGOS -->
+
+	<!-- COMEÇO DO CONTEUDO -->
+	<section class="conteudo">	
+		<a href="produto1.html">  
+			<div class="produtos">
+			<img src="../img/marrocos2.jpg">
+			<h1> Marrocos </h1>
+			<br>
+			<p> Com cerca de um milhão de habitantes, a CAPITAL do Marrocos, Rabat, fica na beira do Atlântico e é cercada por belos montes e montanhas. Marrocos tem uma característica diferente de outros países do mundo; o país separa suas cidades por cores, a CAPITAL é representada pela cor branca, então, não estranhe ao visitá-la, pois sempre encontrará algo branco na pintura da estrutura dos imóveis locais.</p>
+			
+			</div>
+		</a>
+		<a href="produto2.html">
+			<div class="produtos">
+			<img src="../img/disney2.jpg">
+			<h1> Disney </h1>
+			<br>
+			<p> Orlando é um lugar mágico onde as fantasias de adultos e crianças se transformam em realidade. Experiências que divertem, impressionam, inspiram e mexem com a imaginação de seus visitantes, ficando guardadas para sempre em um lugar especial de suas memórias e corações. </p>
+			
+			</div>
+		</a>
+		<a href="produto3.html">
+			<div class="produtos">
+			<img src="../img/puntaCana2.jpg">
+			<h1> Punta Cana </h1>
+			<br>
+			<p> Um paraíso para os apaixonados por mar e tranquilidade. Águas cristalinas, areia branquíssima e palmeiras embaladas pela brisa vão encantar os viajantes que chegarem a Punta Cana e Bávaro. Atmosfera ideal para famílias, casais e amigos em busca das férias perfeitas. </p>
+			</div>
+		</a>
+		
+	</section>
+	<!-- FIM CONTEUDO -->
+
+	<!-- COMEÇO RODAPÉ -->
+	<footer class="rodape">
+		<div class="licenca">
+			<p> &copy; Copyright </p>
+		</div>
+
+		<a href="#">
+			<div class="botoes" id="botao_topo"> </div>
+		</a>
+
+		<a href="#">
+			<div class="botoes" id="botao_facebook"> </div>
+		</a>
+		
+		<a href="#">
+			<div class="botoes" id="botao_twitter"> </div>
+		</a>
+		
+		<a href="#">
+			<div class="botoes" id="botao_youtube"> </div>
+		</a>
+
+	</footer>
+	<!-- FIM RODAPÉ -->
+</body>
+</html>

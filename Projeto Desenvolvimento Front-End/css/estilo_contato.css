@@ -1,0 +1,61 @@
+.informacoes{
+	text-align: center;
+	margin: 10px 0;
+}
+
+.informacoes .endereco{text-align: left;}
+
+.formulario{
+	position: relative;
+	margin: 10px auto;
+	width: 60%;
+	border: 1px solid #222;
+	background-color: #007777;
+}
+
+.formulario fieldset{border: 0;}
+
+.formulario legend{ margin: 0 auto;}
+.formulario label, .formulario p{ font-size: 12px;}
+
+.formulario input[type=text],[type="email"], .formulario textarea{
+		width: 90%;
+		padding: 2px 5px;
+		margin-bottom: 20px;
+	}
+
+.red{ color: red;}
+.erro{ color: red;}
+@media(min-width: 701px){
+
+
+	.formulario legend{ font-size: 20px;}
+
+	
+
+
+}
+
+@media(min-width: 1001px){
+	.formulario{ width: 75%;}
+	.informacoes p{
+	 font-size: 14px;
+	 margin-left: 20px; 
+	}
+	.formulario label{ margin-left: 20px;}
+	input[type="checkbox"] + label{ margin-left: 0}
+	.formulario input{ margin-left: 20px;}
+	.formulario legend{ font-size: 28px;}
+	.formulario textarea{ margin-left: 20px;}
+	.formulario input[type=text],[type="email"], .formulario textarea{ padding: 5px;}
+
+	.formulario input[type="submit"]{
+		width: 20%;
+		height: 30px;
+		margin-left: 20px;
+		margin-bottom: 20px;
+	}
+	.erro{margin-left:20px;}
+
+
+}

@@ -1,0 +1,59 @@
+-- Table: livro
+
+-- DROP TABLE livro;
+
+CREATE TABLE livro
+(
+  titulo character varying,
+  ano integer,
+  pagina integer,
+  sinopse character varying,
+  autor character varying,
+  status boolean,
+  id serial NOT NULL,
+  imagem character varying,
+  CONSTRAINT livro_pkey PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE livro
+  OWNER TO postgres;
+
+
+-- Table: atendente
+
+-- DROP TABLE atendente;
+
+CREATE TABLE atendente
+(
+  matricula serial NOT NULL,
+  nome character varying,
+  endereco character varying,
+  telefone character varying,
+  CONSTRAINT atendente_pkey PRIMARY KEY (matricula)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE atendente
+  OWNER TO postgres;
+
+
+-- Table: cliente
+
+-- DROP TABLE cliente;
+
+CREATE TABLE cliente
+(
+  matricula serial NOT NULL,
+  nome character varying,
+  endereco character varying,
+  telefone integer,
+  CONSTRAINT "Cliente_pkey" PRIMARY KEY (matricula)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE cliente
+  OWNER TO postgres;

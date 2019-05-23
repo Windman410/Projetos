@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="jogo-dengue.CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Controls.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Controls.cs" Line="46" Column="3" />
+      <File FileName="Assets\control.cs" Line="37" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

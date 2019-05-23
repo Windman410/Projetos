@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+        <title> Cadastrar </title>
+    </h:head>
+    <ui:composition template="/WEB-INF/template/template.xhtml">
+        <ui:define name="content">
+            <div id="geral">
+                <div id="conteudo">
+                    <div class="formulario">
+                        <h1>Cadastro de Livros</h1>
+                        <h:form enctype="multipart/form-data">
+                            <h:outputText value="Titulo do Livro" /> <br/>
+                            <h:inputText value="#{livroBean.livro.titulo}"/> <br/>
+                            <h:outputText value="Ano do Livro" /> <br/>
+                            <h:inputText value="#{livroBean.livro.ano}"/> <br/>
+                            <h:outputText value="Quantidade de paginas do Livro" /> <br/>
+                            <h:inputText value="#{livroBean.livro.pagina}"/> <br/>
+                            <h:outputText value="Sinopse do Livro" /> <br/>
+                            <h:inputText value="#{livroBean.livro.sinopse}"/> <br/>
+                            <h:outputText value="Autor do Livro" /> <br/>
+                            <h:inputText value="#{livroBean.livro.autor}"/> <br/>
+                            <h:outputText value="Livro Emprestado?" /> <br/>
+                            <h:selectBooleanCheckbox value="#{livroBean.livro.status}"/> <br/>
+                            <h:commandButton value="Cadastrar"
+                                             action="#{livroBean.salvar()}"/> <br/>
+                        </h:form>
+                            
+                        <h1> Cadastro de Cliente </h1>
+                        
+                        <h:form>
+                            <h:outputText value="Nome Cliente" /> <br/>
+                            <h:inputText value="#{clienteBean.cliente.nome}"/> <br/>
+                            <h:outputText value="Endereço Cliente" /> <br/>
+                            <h:inputText value="#{clienteBean.cliente.endereco}"/> <br/>
+                            <h:outputText value="Telefone Cliente" /> <br/>
+                            <h:inputText value="#{clienteBean.cliente.telefone}"/> <br/>
+                            <h:commandButton value="Cadastrar"
+                                             action="#{clienteBean.salvar()}"/> <br/>
+                        </h:form>
+                    </div>
+                </div>
+            </div>
+        </ui:define>
+    </ui:composition>
+</html>
+

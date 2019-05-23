@@ -1,0 +1,7 @@
+Instalação:
+
+Ter instalado o postgreSQL 9.4 (o driver do JDBC já esta incluido no source)
+A porta do Banco deve ser 5432 A senha de acesso do Banco deve ser 12345678
+O nome do Banco deve ser Biblioteca Restaurar as tabelas, que vão estar na pasta biblioteca com o nom "Biblioteca.backup" 
+A versão do NetBeans deve ser a 8.1 
+Atualizar os plugins do NetBeans (ajuda - Verificar Atualizações)

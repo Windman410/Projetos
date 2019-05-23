@@ -1,0 +1,195 @@
+*{
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+	font-size: 12px;
+	color: #222;
+}
+
+body{
+	background-color: #DDD;
+}
+
+
+.topo{
+	position: relative;
+	z-index: 100;
+	width: 100%;
+	height: 40px;
+	background-color: #CCFFFF;
+	z-index: 100;
+}
+
+
+.topo .container{
+	max-width: 1000px;
+}
+
+.topo figure{
+	position: absolute;
+	width: 100px;
+	height: 40px;
+}
+
+.topo figure a img{
+	width: 100px;
+	height: 40px;
+}
+
+.topo .menu{display: none;}
+.topo .busca{display: none;}
+
+.topo .botaoMenuMobile{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 5px;
+	right: 20px;
+	background-image: url(../img/menuMobile.png);
+	background-size: cover;	
+}
+
+.topo .tituloMobile{
+	position: absolute;
+	top: 10px;
+	left: calc(50% - 60px);
+	font-size: 20px;
+	font-weight: bold; 
+}
+
+.subArtigoImagem{display: none;}
+.subArtigo{display: none;}
+
+@media(min-width: 701px){
+
+	.topo .tituloMobile{ font-size: 28px;}
+
+	.topo .botaoMenuMobile{
+		width: 30px;
+		height: 30px;
+	}
+	
+}
+
+@media(min-width: 1001px){
+
+	.topo{
+		height: 60px;
+	}
+
+	.topo figure a img{
+	width: 120px;
+	height: 60px;
+	}
+	
+	.topo .menu{	
+	display: block;
+	position: absolute;
+	top: 15px;
+	left: 20%;
+	width: 600px;
+	}
+
+
+	
+	.topo .menu .artigo{
+	border: 1px solid #222;
+	margin-right: 40px;
+	float: left;
+	width: 100px;
+	height: 30px;
+	background-color: #0099CC;
+	}
+
+	.topo .menu .artigo p{
+		margin: 7px 0 0 20px;
+		font-size: 18px;
+	}
+
+	.topo .menu .artigo:hover p{
+		text-decoration: underline;
+		color: #D8b;
+	}
+
+	.subArtigo{
+		position: absolute;
+		z-index: 200;
+		top: 46px;
+		width: calc(100% - 2px);
+		height: 200px;
+		background: #0099CC;
+		border: 1px solid #222;
+	}
+
+	.subArtigo nav{
+		margin-left: 160px; 
+		width: 100px;
+		height: 200px;
+		float: left;
+	}
+
+	.subArtigo nav ul li{list-style: none;}
+	.subArtigo p{
+		text-align: center;
+		font-size: 18px;
+		height: 43px;
+		padding-top: 22px;
+		width: 250px;
+	}
+
+	.subArtigo p:hover{
+		text-decoration: underline;
+		color: #D8b;
+	}
+
+	.subArtigo .subArtigoImagem{
+		position: absolute;
+		top: 0;
+		left: calc(50% - 251px); 
+		width: 500px;
+		height: 200px;
+		background-size: 500px 200px;
+		background-repeat: no-repeat;
+	}
+
+	#subArtigoImagem01{
+		background-image: url(../img/marrocos.jpg);
+		display: block;
+	}
+	#subArtigoImagem02{background-image: url(../img/disney.jpg);}
+	#subArtigoImagem03{background-image: url(../img/puntaCana.jpg);}
+
+	.topo .busca{
+		display: block;
+		position: absolute;
+		top: 20px;
+		right: 2%;
+		width: 200px;
+		height: 30px;
+	}
+
+	.topo .busca input[type="text"]{
+		width: 200px;
+		height: 17px;
+		padding: 2px 5px;
+	}
+	.topo .busca input[type="image"]{
+		position: absolute;
+		top: 1px;
+		right: -13px;
+		height: 23px;
+		width: 20px;
+	}
+
+
+	.banner{
+		position: absolute;
+		top: 80px;
+		height: 200px;
+	}
+
+	.topo .botaoMenuMobile{ display: none; }
+	.topo .tituloMobile{ display: none; }
+
+}

@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Projeto Integrador</title>
+
+  <!-- CSS  -->
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet">
+  <link href="css/style.css" type="text/css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  
+  <ul id="slide-out" class="side-nav fixed">
+    <li>
+      <div class="userView">
+        <a href=""><img id="logo" src="img/logo-iesb-ead.png"></a>
+      </div>      
+    </li>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect" href="">Cursos</a></li>
+    <li><a class="waves-effect" href="">Usuários</a></li>
+    <li><a class="waves-effect" href="">Perfis</a></li>
+    <li><a class="waves-effect" href="">Configurações</a></li>
+    <li><div class="divider"></div></li>
+    <li class="active red"><a class="waves-effect white-text" href="">Documentos</a></li>
+    <li><a class="waves-effect" href="">Metas</a></li>
+    <li><a class="waves-effect" href="">Relatórios</a></li>
+  </ul>
+  <a href="" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+  <div class="main">
+    <div class="row">
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab col s3"><a href="#tipo">Tipos</a></li>
+          <li class="tab col s3"><a class="active" href="#novo">Novo</a></li>          
+          <li class="tab col s3"><a href="#aprovacao">Aprovação</a></li>
+          <li class="tab col s3"><a href="#recusados">Recusados</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="tab-content">
+        <!-- START NOVO -->
+        <div id="novo" class="col s12">
+          <div class="row">
+            <form class="col s10 offset-s1" method="post">
+              <div class="row">
+                <div class="col s12">
+                  <br>
+                  <h4 class="center red-text text-darken-1">Cadastrar Documento</h4>
+                </div>
+
+                <div class="input-field col s12">
+                  <select>
+                    <option value="" disabled selected>Curso</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
+                </div>
+
+                <div class="input-field col s12">
+                  <input id="nome" type="text">
+                  <label for="nome">Nome</label>
+                </div>
+
+                
+                <div class="input-field col s4">
+                  <input id="data" type="date" class="datepicker">
+                  <label for="data">Data</label>
+                </div>
+
+                <div class="input-field col s8">
+                  <select>
+                    <option value="" disabled selected>Tipo</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
+                </div>
+                
+
+                <div class="input-field col s12">
+                  <input id="tag" type="text">
+                  <label for="tag">Tag</label>
+                </div>
+
+                <div class="input-field col s12">
+                  <textarea id="textarea1" class="materialize-textarea"></textarea>
+                  <label for="textarea1">Descrição</label>
+                </div>
+
+                <div class="col s7">
+                  <div class="file-field input-field">
+                    <div class="btn red waves-effect">
+                      <span>Arquivo</span>
+                      <i class="material-icons right">attach_file</i>
+                      <input type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                      <input class="file-path validate" type="text">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col s5">
+                  <br>
+                  <button class="btn waves-effect red right" type="button">Enviar Para Aprovação
+                    <i class="material-icons right">send</i>
+                  </button>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+        <!-- END NOVO -->
+
+        <!-- START TIPO -->
+        <div id="tipo" class="col s12">
+          <div class="row">
+            <form class="col s10 offset-s1" method="post">
+              <div class="row">
+                <div class="col s12">
+                  <br>
+                  <h4 class="center red-text text-darken-1">Cadastrar Tipo</h4>
+                </div>
+
+                <div class="input-field col s9">
+                  <input id="tipo" type="text">
+                  <label for="tipo">Tipo</label>
+                </div>
+
+                <div class="col s3">
+                  <br>
+                  <button class="btn waves-effect red right" type="button">Cadastrar
+                    <i class="material-icons right">add</i>
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <div class="col s10 offset-s1">
+              <div class="row">
+                <div class="col s12">
+                  <br>
+                  <h4 class="center red-text text-darken-1">Tipos de Documento</h4>
+                </div>
+
+                <div class="col s12">
+                  <table class="striped">
+                    <thead>
+                      <tr>
+                        <th>Tipo</th>
+                        <th>Ações</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>Relatório de Avaliação CPA</td>
+                        <td>
+                          <i class="material-icons right red-text acoes">clear</i>
+                          <i class="material-icons right blue-text acoes">create</i>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>Relatório de visita do MEC</td>
+                        <td>
+                          <i class="material-icons right red-text acoes">clear</i>
+                          <i class="material-icons right blue-text acoes">create</i>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>Relatório ENADE</td>
+                        <td>
+                          <i class="material-icons right red-text acoes">clear</i>
+                          <i class="material-icons right blue-text acoes">create</i>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>Relatório de Supervisão</td>
+                        <td>
+                          <i class="material-icons right red-text acoes">clear</i>
+                          <i class="material-icons right blue-text acoes">create</i>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>Relatório de Estágio</td>
+                        <td>
+                          <i class="material-icons right red-text acoes">clear</i>
+                          <i class="material-icons right blue-text acoes">create</i>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>Política de estágio do curso</td>
+                        <td>
+                          <i class="material-icons right red-text acoes">clear</i>
+                          <i class="material-icons right blue-text acoes">create</i>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>Política de Projeto Integrador</td>
+                        <td>
+                          <i class="material-icons right red-text acoes">clear</i>
+                          <i class="material-icons right blue-text acoes">create</i>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>Projeto Integrador Nota 10</td>
+                        <td>
+                          <i class="material-icons right red-text acoes">clear</i>
+                          <i class="material-icons right blue-text acoes">create</i>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>Edital Processo Seletivo para Monitoria</td>
+                        <td>
+                          <i class="material-icons right red-text acoes">clear</i>
+                          <i class="material-icons right blue-text acoes">create</i>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END TIPO -->
+
+        <!-- START APROVACAO -->
+        <div id="aprovacao" class="col s12">
+          <div class="row">
+            <div class="col s10 offset-s1">
+              <div class="row">
+                <div class="col s12">
+                  <br>
+                  <h4 class="center red-text text-darken-1">Documentos Pendentes</h4>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="collapsible popout" data-collapsible="accordion">
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">attachment</i>
+                        <strong>02-2017 (010)</strong> Política de Projeto Integrador
+                      </div>
+                      <div class="collapsible-body">
+                        <span><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</span><br>
+                        <span><strong>Tipo:</strong> Política de Projeto Integrador</span><br>
+                        <span><strong>Data:</strong> 21/05/17</span><br>
+                        <span><strong>Descrição:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br>                    
+                        
+                        <div class="center">
+                          <div data-target="modal-recusar" class="waves-effect waves-light btn grey darken-1">Recusar</div>
+                          <div data-target="modal-aprovar" class="waves-effect waves-light btn red">Aprovar</div>
+                          <a href="pig10.pdf" target="_blank">
+                            <div class="waves-effect waves-light btn red">Abrir
+                              <i class="material-icons right">attach_file</i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">attachment</i>
+                        <strong>02-2017 (015)</strong> Edital Processo Seletivo para Monitoria
+                      </div>
+                      <div class="collapsible-body">
+                        <span><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</span><br>
+                        <span><strong>Tipo:</strong> Edital Processo Seletivo para Monitoria</span><br>
+                        <span><strong>Data:</strong> 21/05/17</span><br>
+                        <span><strong>Descrição:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br>                    
+                        
+                        <div class="center">
+                          <div data-target="modal-recusar" class="waves-effect waves-light btn grey darken-1">Recusar</div>
+                          <div data-target="modal-aprovar" class="waves-effect waves-light btn red">Aprovar</div>
+                          <a href="pig10.pdf" target="_blank">
+                            <div class="waves-effect waves-light btn red">Abrir
+                              <i class="material-icons right">attach_file</i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">attachment</i>
+                        <strong>02-2017 (010)</strong> Política de Projeto Integrador
+                      </div>
+                      <div class="collapsible-body">
+                        <span><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</span><br>
+                        <span><strong>Tipo:</strong> Política de Projeto Integrador</span><br>
+                        <span><strong>Data:</strong> 21/05/17</span><br>
+                        <span><strong>Descrição:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br>                    
+                        
+                        <div class="center">
+                          <div data-target="modal-recusar" class="waves-effect waves-light btn grey darken-1">Recusar</div>
+                          <div data-target="modal-aprovar" class="waves-effect waves-light btn red">Aprovar</div>
+                          <a href="pig10.pdf" target="_blank">
+                            <div class="waves-effect waves-light btn red">Abrir
+                              <i class="material-icons right">attach_file</i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">attachment</i>
+                        <strong>02-2017 (015)</strong> Edital Processo Seletivo para Monitoria
+                      </div>
+                      <div class="collapsible-body">
+                        <span><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</span><br>
+                        <span><strong>Tipo:</strong> Edital Processo Seletivo para Monitoria</span><br>
+                        <span><strong>Data:</strong> 21/05/17</span><br>
+                        <span><strong>Descrição:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br>                    
+                        
+                        <div class="center">
+                          <div data-target="modal-recusar" class="waves-effect waves-light btn grey darken-1">Recusar</div>
+                          <div data-target="modal-aprovar" class="waves-effect waves-light btn red">Aprovar</div>
+                          <a href="pig10.pdf" target="_blank">
+                            <div class="waves-effect waves-light btn red">Abrir
+                              <i class="material-icons right">attach_file</i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">attachment</i>
+                        <strong>02-2017 (010)</strong> Política de Projeto Integrador
+                      </div>
+                      <div class="collapsible-body">
+                        <span><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</span><br>
+                        <span><strong>Tipo:</strong> Política de Projeto Integrador</span><br>
+                        <span><strong>Data:</strong> 21/05/17</span><br>
+                        <span><strong>Descrição:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br>                    
+                        
+                        <div class="center">
+                          <div data-target="modal-recusar" class="waves-effect waves-light btn grey darken-1">Recusar</div>
+                          <div data-target="modal-aprovar" class="waves-effect waves-light btn red">Aprovar</div>
+                          <a href="pig10.pdf" target="_blank">
+                            <div class="waves-effect waves-light btn red">Abrir
+                              <i class="material-icons right">attach_file</i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">attachment</i>
+                        <strong>02-2017 (015)</strong> Edital Processo Seletivo para Monitoria
+                      </div>
+                      <div class="collapsible-body">
+                        <span><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</span><br>
+                        <span><strong>Tipo:</strong> Edital Processo Seletivo para Monitoria</span><br>
+                        <span><strong>Data:</strong> 21/05/17</span><br>
+                        <span><strong>Descrição:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br>                    
+                        
+                        <div class="center">
+                          <div data-target="modal-recusar" class="waves-effect waves-light btn grey darken-1">Recusar</div>
+                          <div data-target="modal-aprovar" class="waves-effect waves-light btn red">Aprovar</div>
+                          <a href="pig10.pdf" target="_blank">
+                            <div class="waves-effect waves-light btn red">Abrir
+                              <i class="material-icons right">attach_file</i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">attachment</i>
+                        <strong>02-2017 (010)</strong> Política de Projeto Integrador
+                      </div>
+                      <div class="collapsible-body">
+                        <span><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</span><br>
+                        <span><strong>Tipo:</strong> Política de Projeto Integrador</span><br>
+                        <span><strong>Data:</strong> 21/05/17</span><br>
+                        <span><strong>Descrição:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br>                    
+                        
+                        <div class="center">
+                          <div data-target="modal-recusar" class="waves-effect waves-light btn grey darken-1">Recusar</div>
+                          <div data-target="modal-aprovar" class="waves-effect waves-light btn red">Aprovar</div>
+                          <a href="pig10.pdf" target="_blank">
+                            <div class="waves-effect waves-light btn red">Abrir
+                              <i class="material-icons right">attach_file</i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">attachment</i>
+                        <strong>02-2017 (015)</strong> Edital Processo Seletivo para Monitoria
+                      </div>
+                      <div class="collapsible-body">
+                        <span><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</span><br>
+                        <span><strong>Tipo:</strong> Edital Processo Seletivo para Monitoria</span><br>
+                        <span><strong>Data:</strong> 21/05/17</span><br>
+                        <span><strong>Descrição:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br>                    
+                        
+                        <div class="center">
+                          <div data-target="modal-recusar" class="waves-effect waves-light btn grey darken-1">Recusar</div>
+                          <div data-target="modal-aprovar" class="waves-effect waves-light btn red">Aprovar</div>
+                          <a href="pig10.pdf" target="_blank">
+                            <div class="waves-effect waves-light btn red">Abrir
+                              <i class="material-icons right">attach_file</i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <!-- Modal Structure -->
+                  <div id="modal-aprovar" class="modal">
+                    <div class="modal-content">
+                      <h4>Deseja aprovar este documento?</h4>
+                    </div>
+                    <div class="modal-footer">
+                      <a class="modal-action modal-close waves-effect waves-red btn-flat">Sim</a>
+                      <a class="modal-action modal-close waves-effect waves-red btn-flat">Não</a>
+                    </div>
+                  </div>
+                  <!-- Modal Structure -->
+                  <div id="modal-recusar" class="modal">
+                    <div class="modal-content">
+                      <h4>Deseja recusar este documento?</h4>
+                      <div class="input-field col s12">
+                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Justificativa</label>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <a class="modal-action modal-close waves-effect waves-red btn-flat">Sim</a>
+                      <a class="modal-action modal-close waves-effect waves-red btn-flat">Não</a>
+                    </div>
+                  </div>
+                  <!-- End Modal Structures -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END APROVACAO -->
+
+        <!-- START RECUSADOS -->
+        <div id="recusados" class="col s12">
+          <div class="row">
+            <div class="col s10 offset-s1">
+              <div class="row">
+                <div class="col s12">
+                  <br>
+                  <h4 class="center red-text text-darken-1">Documentos Recusados</h4>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s12">
+                  <ul class="collapsible popout" data-collapsible="accordion">
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">attachment</i>
+                        <strong>02-2017 (010)</strong> Política de Projeto Integrador
+                      </div>
+                      <div class="collapsible-body">
+                        <span><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</span><br>
+                        <span><strong>Tipo:</strong> Política de Projeto Integrador</span><br>
+                        <span><strong>Data:</strong> 21/05/17</span><br>
+                        <span><strong>Descrição:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br> 
+                        <span><strong>Justificativa:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br>                    
+                        
+                        <div class="center">
+                          <div data-target="modal-reenviar" class="waves-effect waves-light btn grey darken-1">Reenviar Para Aprovação
+                            <i class="material-icons right">loop</i>
+                          </div>
+                          <a href="pig10.pdf" target="_blank">
+                            <div class="waves-effect waves-light btn red">Abrir
+                              <i class="material-icons right">attach_file</i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">attachment</i>
+                        <strong>02-2017 (015)</strong> Edital Processo Seletivo para Monitoria
+                      </div>
+                      <div class="collapsible-body">
+                        <span><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</span><br>
+                        <span><strong>Tipo:</strong> Edital Processo Seletivo para Monitoria</span><br>
+                        <span><strong>Data:</strong> 21/05/17</span><br>
+                        <span><strong>Descrição:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br>      
+                        <span><strong>Justificativa:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br>               
+                        
+                        <div class="center">
+                          <div data-target="modal-reenviar" class="waves-effect waves-light btn grey darken-1">Reenviar Para Aprovação
+                            <i class="material-icons right">loop</i>
+                          </div>
+                          <a href="pig10.pdf" target="_blank">
+                            <div class="waves-effect waves-light btn red">Abrir
+                              <i class="material-icons right">attach_file</i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">attachment</i>
+                        <strong>02-2017 (010)</strong> Política de Projeto Integrador
+                      </div>
+                      <div class="collapsible-body">
+                        <span><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</span><br>
+                        <span><strong>Tipo:</strong> Política de Projeto Integrador</span><br>
+                        <span><strong>Data:</strong> 21/05/17</span><br>
+                        <span><strong>Descrição:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br>         
+                        <span><strong>Justificativa:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br>            
+                        
+                        <div class="center">
+                          <div data-target="modal-reenviar" class="waves-effect waves-light btn grey darken-1">Reenviar Para Aprovação
+                            <i class="material-icons right">loop</i>
+                          </div>
+                          <a href="pig10.pdf" target="_blank">
+                            <div class="waves-effect waves-light btn red">Abrir
+                              <i class="material-icons right">attach_file</i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">attachment</i>
+                        <strong>02-2017 (015)</strong> Edital Processo Seletivo para Monitoria
+                      </div>
+                      <div class="collapsible-body">
+                        <span><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</span><br>
+                        <span><strong>Tipo:</strong> Edital Processo Seletivo para Monitoria</span><br>
+                        <span><strong>Data:</strong> 21/05/17</span><br>
+                        <span><strong>Descrição:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br>                
+                        <span><strong>Justificativa:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br>     
+                        
+                        <div class="center">
+                          <div data-target="modal-reenviar" class="waves-effect waves-light btn grey darken-1">Reenviar Para Aprovação
+                            <i class="material-icons right">loop</i>
+                          </div>
+                          <a href="pig10.pdf" target="_blank">
+                            <div class="waves-effect waves-light btn red">Abrir
+                              <i class="material-icons right">attach_file</i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">attachment</i>
+                        <strong>02-2017 (010)</strong> Política de Projeto Integrador
+                      </div>
+                      <div class="collapsible-body">
+                        <span><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</span><br>
+                        <span><strong>Tipo:</strong> Política de Projeto Integrador</span><br>
+                        <span><strong>Data:</strong> 21/05/17</span><br>
+                        <span><strong>Descrição:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br>                
+                        <span><strong>Justificativa:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br>     
+                        
+                        <div class="center">
+                          <div data-target="modal-reenviar" class="waves-effect waves-light btn grey darken-1">Reenviar Para Aprovação
+                            <i class="material-icons right">loop</i>
+                          </div>
+                          <a href="pig10.pdf" target="_blank">
+                            <div class="waves-effect waves-light btn red">Abrir
+                              <i class="material-icons right">attach_file</i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">attachment</i>
+                        <strong>02-2017 (015)</strong> Edital Processo Seletivo para Monitoria
+                      </div>
+                      <div class="collapsible-body">
+                        <span><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</span><br>
+                        <span><strong>Tipo:</strong> Edital Processo Seletivo para Monitoria</span><br>
+                        <span><strong>Data:</strong> 21/05/17</span><br>
+                        <span><strong>Descrição:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br>                  
+                        <span><strong>Justificativa:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br>   
+                        
+                        <div class="center">
+                          <div data-target="modal-reenviar" class="waves-effect waves-light btn grey darken-1">Reenviar Para Aprovação
+                            <i class="material-icons right">loop</i>
+                          </div>
+                          <a href="pig10.pdf" target="_blank">
+                            <div class="waves-effect waves-light btn red">Abrir
+                              <i class="material-icons right">attach_file</i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">attachment</i>
+                        <strong>02-2017 (010)</strong> Política de Projeto Integrador
+                      </div>
+                      <div class="collapsible-body">
+                        <span><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</span><br>
+                        <span><strong>Tipo:</strong> Política de Projeto Integrador</span><br>
+                        <span><strong>Data:</strong> 21/05/17</span><br>
+                        <span><strong>Descrição:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br>                    
+                        <span><strong>Justificativa:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br> 
+                        
+                        <div class="center">
+                          <div data-target="modal-reenviar" class="waves-effect waves-light btn grey darken-1">Reenviar Para Aprovação
+                            <i class="material-icons right">loop</i>
+                          </div>
+                          <a href="pig10.pdf" target="_blank">
+                            <div class="waves-effect waves-light btn red">Abrir
+                              <i class="material-icons right">attach_file</i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="collapsible-header"><i class="material-icons">attachment</i>
+                        <strong>02-2017 (015)</strong> Edital Processo Seletivo para Monitoria
+                      </div>
+                      <div class="collapsible-body">
+                        <span><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</span><br>
+                        <span><strong>Tipo:</strong> Edital Processo Seletivo para Monitoria</span><br>
+                        <span><strong>Data:</strong> 21/05/17</span><br>
+                        <span><strong>Descrição:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br>                   
+                        <span><strong>Justificativa:</strong></span><br><br>
+                        <div class="descricao-lista">
+                        Trata-se de um documento que define as diretrizes da disciplina projeto integrador 1 no iesb, Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </div><br>  
+                        
+                        <div class="center">
+                          <div data-target="modal-reenviar" class="waves-effect waves-light btn grey darken-1">Reenviar Para Aprovação
+                            <i class="material-icons right">loop</i>
+                          </div>
+                          <a href="pig10.pdf" target="_blank">
+                            <div class="waves-effect waves-light btn red">Abrir
+                              <i class="material-icons right">attach_file</i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <!-- Modal Structure -->
+                  <div id="modal-reenviar" class="modal">
+                    <div class="modal-content">
+                      <h4>Deseja reenviar este documento?</h4>
+                    </div>
+                    <div class="modal-footer">
+                      <a class="modal-action modal-close waves-effect waves-red btn-flat">Sim</a>
+                      <a class="modal-action modal-close waves-effect waves-red btn-flat">Não</a>
+                    </div>
+                  </div>
+                  <!-- End Modal Structure -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END RECUSADOS -->
+      </div>
+    </div>
+  </div>
+              
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>

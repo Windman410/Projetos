@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+    </h:head>
+    <h:body>
+        <ui:composition template="/WEB-INF/template/template.xhtml">
+        <ui:define name="content">
+          <div id="geral">
+          <div id="conteudo">
+          <div class="formulario">
+        <h:dataTable value="#{livroBean.livro}" var="li">  
+            <h:column>
+                <h:outputText value="Id do Livro:"/> <br/>
+                <h:outputText value="#{li.id}"/> <br/> <br/>
+
+                <h:outputText value="Titulo do Livro:"/> <br/>
+                <h:outputText value="#{li.titulo}"/> <br/> <br/>
+
+                <h:outputText value="Ano do Livro:"/> <br/>
+                <h:outputText value="#{li.ano}"/> <br/> <br/>
+
+                <h:outputText value="Quantidade de Paginas:"/> <br/>
+                <h:outputText value="#{li.pagina}"/> <br/> <br/>
+
+                <h:outputText value="Sinopse do Livro:"/> <br/>
+                <h:outputText value="#{li.sinopse}"/> <br/> <br/>
+
+                <h:outputText value="Autor do Livro:"/> <br/>
+                <h:outputText value="#{li.autor}"/> <br/> <br/>
+
+                <h:outputText value="Status do livro"/> <br/>
+                <h:outputText value="Emprestado" rendered="#{li.status}"/>
+                <h:outputText value ="Disponivel" rendered="#{not li.status}"/>
+            </h:column>
+        </h:dataTable>
+            
+        <br/><br/><br/>
+                </div>
+        </div>
+        </div>
+        </ui:define>
+     </ui:composition>
+        
+    </h:body>
+</html>
+

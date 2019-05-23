@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> MVM Turismo </title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/estilo_topo.css">
+	<link rel="stylesheet" type="text/css" href="../css/estilo_rodape.css">
+	<link rel="stylesheet" type="text/css" href="../css/estilo_menuMobile.css">
+	<link rel="stylesheet" type="text/css" href="../css/estilo_clientes.css">
+	<link rel="icon" type="img/icon" href="../img/favicon.ico">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="../js/jquery.js"></script>
+
+</head>
+
+<body>
+	<section class="menuMobile"> 
+
+		<div id="fechar"> </div>
+		
+		<div class="linkMenuMobile">
+			<form action="procura.php" method="get">
+				<input type="text" placeholder="pesquisar..." name="pesquisa">
+				<input type="image" src="../img/img02.jpg" alt="Enviar">	
+			</form>
+		</div>
+
+		<a href="../index.html"> 
+			<div class="linkMenuMobile">
+				<p> Home </p>
+			</div>
+		</a>
+
+		<a href="produtos.html"> 
+			<div class="linkMenuMobile">
+				<p> Serviços </p>
+			</div>
+		</a>
+
+		<a href="clientes.html"> 
+			<div class="linkMenuMobile">
+				<p> Clientes </p>
+			</div>
+		</a>
+		
+		<a href="contato.html">
+			<div class="linkMenuMobile">
+				<p> Contato </p>
+			</div>
+		</a>
+	</section>
+
+	<div class="pelicula"> </div>
+
+	<header class="topo">
+		<div class="container">
+			<figure>
+				<a href="../index.html">
+					<img src="../img/logo.png" alt="logo">
+				</a>
+			</figure> <!-- Fim logo -->
+
+			<nav class="menu"> <!-- começo menu -->
+				<a href="../index.html">
+					<div class="artigo">
+						<p> Home </p>
+					</div>
+				</a>
+				
+				<a href="produtos.html">
+					<div class="artigo" id="artigosProduto">
+						 <p> Serviços </p> 						
+					</div>
+				</a>				
+
+				<a href="clientes.html">
+					<div class="artigo">
+						<p> Clientes </p>
+					</div>
+				</a>
+
+				<a href="contato.html">
+					<div class="artigo">
+						<p> Contato </p>
+					</div>
+				</a>
+			</nav> <!-- Fim menu -->
+
+			<form method="get" action="procura.php" class="busca">
+				<input type="text" placeholder="pesquisar..." name="pesquisa">
+				<input type="image" src="../img/img02.jpg" alt="Enviar">
+			</form>
+
+			<h1 class="tituloMobile"> Patrocínio </h1>	
+
+			<div class="botaoMenuMobile"> </div>
+		</div> <!-- Fim container -->
+	</header> <!-- Fim topo-->
+
+	<!-- COMEÇO SUBARTIGOS -->
+	<div class="subArtigo">
+		<nav>
+			<ul>
+				<li> <a href="produto1.html"> <p> Viagem para Marrocos </p> </a> </li>
+				<li> <a href="produto2.html"> <p> Viagem para Disney </p> </a> </li>
+				<li> <a href="produto3.html"> <p> Viagem para Punta Cana </p> </a> </li>
+			</ul>
+		</nav>
+		<a href="pag/produto1.html"> <div class="subArtigoImagem" id="subArtigoImagem01"> </div> </a>
+		<a href="pag/produto2.html"> <div class="subArtigoImagem" id="subArtigoImagem02"> </div> </a>
+		<a href="pag/produto3.html"> <div class="subArtigoImagem" id="subArtigoImagem03"> </div> </a>
+	</div>
+	<!-- FIM SUBARTIGOS -->
+	
+	<!-- COMEÇO DO CONTEUDO -->	
+	<section class="conteudo">
+	<h1 class="tituloConteudo"> Patrocinio </h1> 
+		<div class="conjuntoClientes">
+			<div class="cliente">
+				<img src="../img/clientes01.png" alt="patrocinador">
+			</div>
+
+			<div class="cliente">
+				<img src="../img/clientes02.png" alt="patrocinador">
+			</div>
+
+			<div class="cliente">
+				<img src="../img/clientes03.png" alt="patrocinador">
+			</div>
+		</div>
+		<div class="conjuntoClientes">
+			<div class="cliente">
+				<img src="../img/clientes04.png" alt="patrocinador">
+			</div>
+
+			<div class="cliente">
+				<img src="../img/clientes05.png" alt="patrocinador">
+			</div>
+
+			<div class="cliente">
+				<img src="../img/clientes06.png" alt="patrocinador">
+			</div>
+		</div>
+
+
+	</section>
+	<!-- FIM CONTEUDO -->
+
+
+	<!-- COMEÇO RODAPÉ -->
+	<footer class="rodape">
+		<div class="licenca">
+			<p> &copy; Copyright </p>
+		</div>
+
+		<a href="#">
+			<div class="botoes" id="botao_topo"> </div>
+		</a>
+
+		<a href="#">
+			<div class="botoes" id="botao_facebook"> </div>
+		</a>
+		
+		<a href="#">
+			<div class="botoes" id="botao_twitter"> </div>
+		</a>
+		
+		<a href="#">
+			<div class="botoes" id="botao_youtube"> </div>
+		</a>
+
+	</footer>	
+	<!-- FIM RODAPÉ -->
+
+</body>
+</html>

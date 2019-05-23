@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+    <ui:composition template="/WEB-INF/template/template.xhtml">
+        <ui:define name="content">
+          <div id="geral">
+          <div id="conteudo">
+          <div class="formulario">
+        <h:form>
+            <h:outputText value="Novo Titulo" /> <br/>
+            <h:inputText value="#{livroBean.livro.titulo}"/> <br/>
+            <h:outputText value="Novo Ano" /> <br/>
+            <h:inputText value="#{livroBean.livro.ano}"/> <br/>
+            <h:outputText value="Nova Pagina" /> <br/>
+            <h:inputText value="#{livroBean.livro.pagina}"/> <br/>
+            <h:outputText value="Novo Sinopse" /> <br/>
+            <h:inputText value="#{livroBean.livro.sinopse}"/> <br/>
+            <h:outputText value="Novo Autor" /> <br/>
+            <h:inputText value="#{livroBean.livro.autor}"/> <br/>
+            <h:outputText value="Livro Emprestado?" /> <br/>
+            <h:selectBooleanCheckbox value="#{livroBean.livro.status}"/> <br/>
+            <h:commandButton value="Atualizar"
+            action="#{livroBean.atualizar()}"/> <br/>
+        </h:form>
+          </div>
+          </div>
+          </div>
+        </ui:define>
+     </ui:composition>
+    </h:body>
+</html>
+

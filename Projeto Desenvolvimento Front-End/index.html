@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> MVM Turismo </title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/estilo_topo.css">
+		<link rel="stylesheet" type="text/css" href="css/estilo_rodape.css">
+		<link rel="stylesheet" type="text/css" href="css/estilo_menuMobile.css">
+		<link rel="stylesheet" type="text/css" href="css/estilo_home.css">
+		<link rel="icon" type="img/icon" href="img/favicon.ico">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/jquery.js"></script>
+	</head>
+
+	<body>
+		<!-- COMEÇO MENU MOBILE -->
+		<section class="menuMobile"> 
+
+			<div id="fechar"> </div>
+			
+			<div class="linkMenuMobile">
+				<form action="procura.php" method="get">
+					<input type="text" placeholder="pesquisar..." name="pesquisa">
+					<input type="image" src="img/img02.jpg" alt="Enviar">	
+				</form>
+			</div>
+
+			<a href="index.html"> 
+				<div class="linkMenuMobile">
+					<p> Home </p>
+				</div>
+			</a>
+
+			<a href="pag/produtos.html"> 
+				<div class="linkMenuMobile">
+					<p> Serviços </p>
+				</div>
+			</a>
+
+			<a href="pag/clientes.html"> 
+				<div class="linkMenuMobile">
+					<p> Clientes </p>
+				</div>
+			</a>
+			
+			<a href="pag/contato.html">
+				<div class="linkMenuMobile">
+					<p> Contato </p>
+				</div>
+			</a>
+		</section>
+		<!-- FIM MENU MOBILE -->
+
+		<div class="pelicula"> </div>
+
+		<!-- COMEÇO TOPO -->
+		<header class="topo">
+			<!-- COMEÇO CONTAINER -->
+			<div class="container">
+				<!-- COMEÇO LOGO -->
+				<figure>
+					<a href="index.html">
+						<img src="img/logo.png" alt="logo">
+					</a>
+				</figure> 
+				<!-- FIM LOGO -->
+
+				<!-- COMEÇO MENU -->
+				<nav class="menu"> 
+					<a href="index.html">
+						<div class="artigo">
+							<p> Home </p>
+						</div>
+					</a>
+					<a href="pag/produtos.html">
+						<div class="artigo" id="artigosProduto">
+							 <p> Serviços </p> 						
+						</div>
+					</a>
+
+					<a href="pag/clientes.html">
+						<div class="artigo">
+							<p> Clientes </p>
+						</div>
+					</a>
+
+					<a href="pag/contato.html">
+						<div class="artigo">
+							<p> Contato </p>
+						</div>
+					</a>
+				</nav> 
+				<!-- FIM MENU -->
+
+				<!-- COMEÇO PESQUISA -->
+				<form method="get" action="procura.php" class="busca">
+					<input type="text" placeholder="pesquisar..." name="pesquisa">
+					<input type="image" src="img/img02.jpg" alt="Enviar">
+				</form>
+				<!-- FIM PESQUISA -->
+
+				<h1 class="tituloMobile"> Pagina Inicial </h1>	
+
+				<div class="botaoMenuMobile"> </div>
+			</div> 
+			<!-- FIM CONTAINER -->
+		</header> 
+		<!-- FIM TOPO -->
+
+		<!-- COMEÇO SUBARTIGOS -->
+		<div class="subArtigo">
+			<nav>
+				<ul>
+					<li> <a href="pag/produto1.html"> <p> Viagem para Marrocos </p> </a> </li>
+					<li> <a href="pag/produto2.html"> <p> Viagem para Disney </p> </a> </li>
+					<li> <a href="pag/produto3.html"> <p> Viagem para Punta Cana </p> </a> </li>
+				</ul>
+			</nav>
+			<a href="pag/produto1.html"> <div class="subArtigoImagem" id="subArtigoImagem01"> </div> </a>
+			<a href="pag/produto2.html"> <div class="subArtigoImagem" id="subArtigoImagem02"> </div> </a>
+			<a href="pag/produto3.html"> <div class="subArtigoImagem" id="subArtigoImagem03"> </div> </a>
+		</div>
+		<!-- FIM SUBARTIGOS -->
+
+
+			<!-- COMEÇO BANNER -->
+			<div class="conteudo_principal">
+				<div id="anterior" class="controles"></div>
+				<div id="proximo" class="controles"></div>
+
+				<div class="conjuntoSlides">
+					<div class="slides" id="slide1">
+						<a href="pag/produto1.html">
+						 	<img src="img/marrocos.jpg" alt="Produto 1"> 
+						 	<h2> MARROCOS - CIDADES IMPERIAIS </h2>
+						</a>
+					</div>
+					<div class="slides" id="slide2">
+						<a href="pag/produto2.html">
+							<img src="img/disney.jpg" alt="Produto 2">
+							<h2> DISNEY COM PREÇOS IMPERDÍVEIS! </h2>
+						</a>
+					</div> 
+					<div class="slides" id="slide3">
+						<a href="pag/produto3.html">
+							<img src="img/puntaCana.jpg" alt="Produto 3">
+							<h2> RÉVEILLON EM PUNTA CANA <h2>
+						</a>
+					</div> 
+				</div>	 
+			</div>
+			<!-- FIM BANNER -->
+
+		<!-- COMEÇO ARTIGOS -->
+		<div class="conteudo_secundario">
+			<a href="pag/produto1.html">
+				<div class="artigos" id="conteudo_secundario01">
+					<img src="img/marrocos2.jpg" alt="imagem">
+					<h2> MARROCOS </h2>
+					<p> À VISTA A PARTIR DE € 484 OU ENTRADA DE € 124 + 9X € 40   </p>
+				</div>
+			</a>
+
+			<a href="pag/produto2.html">
+				<div class="artigos" id="conteudo_secundario02">
+					<img src="img/disney2.jpg" alt="imagem">
+					<h2> DISNEY </h2>
+					<p> À VISTA A PARTIR DE € 260 OU ENTRADA DE € 80 + 9X € 25 </p>
+				</div>
+			</a>
+
+			<a href="pag/produto3.html">
+				<div class="artigos" id="conteudo_secundario03">
+					<img src="img/puntaCana2.jpg" alt="imagem">
+					<h2> PUNTA CANA </h2>
+					<p> 8 DIAS | 7 NOITES A PARTIR DE ENTRADA + 9X US$ 186 </p>
+				</div>
+			</a>
+		</div>
+		<!-- FIM ARTIGOS -->
+
+		<!-- COMEÇO RODAPÉ -->
+		<footer class="rodape">
+			<div class="licenca">
+				<p> &copy; Copyright </p>
+			</div>
+
+			<div class="botoes" id="botao_topo"> </div>
+
+			<a href="#">
+				<div class="botoes" id="botao_facebook"> </div>
+			</a>
+			
+			<a href="#">
+				<div class="botoes" id="botao_twitter"> </div>
+			</a>
+			
+			<a href="#">
+				<div class="botoes" id="botao_youtube"> </div>
+			</a>
+		</footer>
+		<!-- FIM RODAPÉ -->
+	</body>
+</html>

@@ -1,0 +1,46 @@
+.conteudo h1{
+	display: none;
+}
+
+.conteudo{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.conjuntoClientes{
+	height: 80px;
+	margin: 100px auto;
+}
+
+.cliente{
+	width: 33.3%;
+	height: 80px;
+	float: left;
+}
+
+.cliente img{
+	margin-left: calc(50% - 40px);
+	width: 80px;
+	height: 80px;
+}
+@media(min-width: 701px){
+	
+}
+
+@media(min-width: 1001px){
+	.conteudo{width: 80%;}
+	.conteudo h1{
+		display: block;
+		width: 100%;
+		text-align: center;
+		font: 28px Arial;
+	}
+
+	.conjuntoClientes{height: 150px;}
+	.cliente{height: 150px;}
+	.cliente img{
+		margin-left: calc(50% - 75px);
+		width: 150px;
+		height: 150px;
+	}
+}

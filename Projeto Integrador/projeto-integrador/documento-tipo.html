@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Projeto Integrador</title>
+
+  <!-- CSS  -->
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet">
+  <link href="css/style.css" type="text/css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  
+  <ul id="slide-out" class="side-nav fixed">
+    <li>
+      <div class="userView">
+        <a href=""><img id="logo" src="img/logo-iesb-ead.png"></a>
+      </div>      
+    </li>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect" href="">Cursos</a></li>
+    <li><a class="waves-effect" href="">Usuários</a></li>
+    <li><a class="waves-effect" href="">Perfis</a></li>
+    <li><a class="waves-effect" href="">Configurações</a></li>
+    <li><div class="divider"></div></li>
+    <li class="active red"><a class="waves-effect white-text" href="">Documentos</a></li>
+    <li><a class="waves-effect" href="">Metas</a></li>
+    <li><a class="waves-effect" href="">Relatórios</a></li>
+  </ul>
+  <a href="" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+  <div class="main">
+    <div class="row">
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab col s3"><a class="active" href="documento-tipo.html">Tipos</a></li>
+          <li class="tab col s3"><a href="index.html">Novo</a></li>          
+          <li class="tab col s3"><a href="#avaliar">Aprovação</a></li>
+          <li class="tab col s3"><a href="#recusados">Recusados</a></li>
+        </ul>
+      </div>
+
+      <div id="tab-content">
+        <div id="novo" class="col s12 grey lighten-5">
+          <div class="row">
+            <form class="col s10 offset-s1" method="post">
+              <div class="row">
+                <div class="col s12">
+                  <br>
+                  <h4 class="center red-text text-darken-1">Adicionar Documento</h4>
+                </div>
+
+                <div class="input-field col s12">
+                  <select>
+                    <option value="" disabled selected>Curso</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
+                </div>
+
+                <div class="input-field col s12">
+                  <input id="nome" type="text">
+                  <label for="nome">Nome</label>
+                </div>
+
+                
+                <div class="input-field col s4">
+                  <input id="data" type="date" class="datepicker">
+                  <label for="data">Data</label>
+                </div>
+
+                <div class="input-field col s8">
+                  <select>
+                    <option value="" disabled selected>Tipo</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
+                </div>
+                
+
+                <div class="input-field col s12">
+                  <input id="tag" type="text">
+                  <label for="tag">Tag</label>
+                </div>
+
+                <div class="input-field col s12">
+                  <textarea id="textarea1" class="materialize-textarea"></textarea>
+                  <label for="textarea1">Descrição</label>
+                </div>
+
+                <div class="col s7">
+                  <div class="file-field input-field">
+                    <div class="btn red waves-effect">
+                      <span>Arquivo</span>
+                      <i class="material-icons right">description</i>
+                      <input type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                      <input class="file-path validate" type="text">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col s5">
+                  <br>
+                  <button class="btn waves-effect red right" type="submit">Enviar Para Aprovação
+                    <i class="material-icons right">send</i>
+                  </button>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+              
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
